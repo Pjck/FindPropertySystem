@@ -5,7 +5,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-using FPS.Exception;
+using FPS.Exceptions;
 
 namespace FPS.DAL
 {
@@ -75,6 +75,11 @@ namespace FPS.DAL
             return flag;
         }
 
+        public List<Property> SearchPropertyByName(string propName)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool UpdateProperty(int propID, Property propObj)
         {
             bool flag = true;
@@ -91,7 +96,7 @@ namespace FPS.DAL
 
                     SqlParameter[] param = new SqlParameter[5];
                     param[0] = new SqlParameter("@propID", propObj.PropertyID);
-                    param[1] = new SqlParameter("@name", propObj.ProductName);
+                    param[1] = new SqlParameter("@name", propObj.PropertyName);
                     param[2] = new SqlParameter("@price", propObj.Price);
                     param[3] = new SqlParameter("@descrip", propObj.Description);
                     param[4] = new SqlParameter("@catName", propObj.CategoryName);
@@ -238,7 +243,7 @@ namespace FPS.DAL
 
         }
 
-        public List<Property> SearchProductByName(string prodName)
+        public List<Property> SearchProductByName(string propName)
         {
             List<Property> mypropList = null;
             Property tempProp = null;

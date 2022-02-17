@@ -246,6 +246,26 @@
             "rid": "win"
           }
         }
+      },
+      "FPS.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/FPS.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FPS.Entity.dll": {}
+        }
+      },
+      "FPS.Exception/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/FPS.Exception.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FPS.Exception.dll": {}
+        }
       }
     }
   },
@@ -732,10 +752,22 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "FPS.Entity/1.0.0": {
+      "type": "project",
+      "path": "../FPS.Entity/FPS.Entity.csproj",
+      "msbuildProject": "../FPS.Entity/FPS.Entity.csproj"
+    },
+    "FPS.Exception/1.0.0": {
+      "type": "project",
+      "path": "../FPS.Exception/FPS.Exception.csproj",
+      "msbuildProject": "../FPS.Exception/FPS.Exception.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "FPS.Entity >= 1.0.0",
+      "FPS.Exception >= 1.0.0",
       "System.Configuration.ConfigurationManager >= 6.0.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
@@ -766,7 +798,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\FPS.Entity.csproj": {
+              "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\FPS.Entity.csproj"
+            },
+            "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\FPS.Exception.csproj": {
+              "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\FPS.Exception.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

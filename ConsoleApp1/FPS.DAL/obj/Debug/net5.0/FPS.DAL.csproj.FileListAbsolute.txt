@@ -10,3 +10,8 @@ C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.DAL\obj\Debug\net5.0\FPS.DAL
 C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.DAL\obj\Debug\net5.0\FPS.DAL.dll
 C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.DAL\obj\Debug\net5.0\ref\FPS.DAL.dll
 C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.DAL\obj\Debug\net5.0\FPS.DAL.pdb
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.DAL\bin\Debug\net5.0\FPS.Entity.dll
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.DAL\bin\Debug\net5.0\FPS.Exception.dll
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.DAL\bin\Debug\net5.0\FPS.Entity.pdb
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.DAL\bin\Debug\net5.0\FPS.Exception.pdb
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.DAL\obj\Debug\net5.0\FPS.DAL.csproj.CopyComplete

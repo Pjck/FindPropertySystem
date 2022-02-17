@@ -27,6 +27,259 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.BL\\FPS.BL.csproj": {
+                "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.BL\\FPS.BL.csproj"
+              },
+              "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\FPS.Entity.csproj": {
+                "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\FPS.Entity.csproj"
+              },
+              "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\FPS.Exception.csproj": {
+                "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\FPS.Exception.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.BL\\FPS.BL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.BL\\FPS.BL.csproj",
+        "projectName": "FPS.BL",
+        "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.BL\\FPS.BL.csproj",
+        "packagesPath": "C:\\Users\\prajw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.BL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\prajw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.DAL\\FPS.DAL.csproj": {
+                "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.DAL\\FPS.DAL.csproj"
+              },
+              "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\FPS.Entity.csproj": {
+                "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\FPS.Entity.csproj"
+              },
+              "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\FPS.Exception.csproj": {
+                "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\FPS.Exception.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.DAL\\FPS.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.DAL\\FPS.DAL.csproj",
+        "projectName": "FPS.DAL",
+        "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.DAL\\FPS.DAL.csproj",
+        "packagesPath": "C:\\Users\\prajw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\prajw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\FPS.Entity.csproj": {
+                "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\FPS.Entity.csproj"
+              },
+              "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\FPS.Exception.csproj": {
+                "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\FPS.Exception.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\FPS.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\FPS.Entity.csproj",
+        "projectName": "FPS.Entity",
+        "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\FPS.Entity.csproj",
+        "packagesPath": "C:\\Users\\prajw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\prajw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\FPS.Exception.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\FPS.Exception.csproj",
+        "projectName": "FPS.Exception",
+        "projectPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\FPS.Exception.csproj",
+        "packagesPath": "C:\\Users\\prajw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prajw\\source\\repos\\Sprint1\\ConsoleApp1\\FPS.Exception\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\prajw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },

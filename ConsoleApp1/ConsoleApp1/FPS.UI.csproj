@@ -5,4 +5,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FPS.BL\FPS.BL.csproj" />
+    <ProjectReference Include="..\FPS.Entity\FPS.Entity.csproj" />
+    <ProjectReference Include="..\FPS.Exception\FPS.Exception.csproj" />
+  </ItemGroup>
+
 </Project>

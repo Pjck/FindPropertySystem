@@ -10,3 +10,10 @@ C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.BL\obj\Debug\net5.0\FPS.BL.c
 C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.BL\obj\Debug\net5.0\FPS.BL.dll
 C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.BL\obj\Debug\net5.0\ref\FPS.BL.dll
 C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.BL\obj\Debug\net5.0\FPS.BL.pdb
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.BL\bin\Debug\net5.0\FPS.DAL.dll
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.BL\bin\Debug\net5.0\FPS.Entity.dll
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.BL\bin\Debug\net5.0\FPS.Exception.dll
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.BL\bin\Debug\net5.0\FPS.DAL.pdb
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.BL\bin\Debug\net5.0\FPS.Entity.pdb
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.BL\bin\Debug\net5.0\FPS.Exception.pdb
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\FPS.BL\obj\Debug\net5.0\FPS.BL.csproj.CopyComplete
