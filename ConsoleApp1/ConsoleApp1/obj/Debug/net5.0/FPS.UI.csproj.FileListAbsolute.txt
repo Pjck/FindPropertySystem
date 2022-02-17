@@ -1,0 +1,16 @@
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\FPS.UI.csproj.AssemblyReference.cache
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\FPS.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\FPS.UI.AssemblyInfoInputs.cache
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\FPS.UI.AssemblyInfo.cs
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\FPS.UI.csproj.CoreCompileInputs.cache
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\FPS.UI.exe
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\FPS.UI.deps.json
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\FPS.UI.runtimeconfig.json
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\FPS.UI.runtimeconfig.dev.json
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\FPS.UI.dll
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\ref\FPS.UI.dll
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\FPS.UI.pdb
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\FPS.UI.dll
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\ref\FPS.UI.dll
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\FPS.UI.pdb
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\FPS.UI.genruntimeconfig.cache

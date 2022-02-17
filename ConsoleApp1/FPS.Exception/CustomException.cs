@@ -8,7 +8,8 @@ namespace FPS.Exceptions
         {
 
         }
-        public CustomException(String errorMessage) : base(errorMessage)
+
+        public CustomException(string errorMessage) : base(errorMessage)
         {
 
         }

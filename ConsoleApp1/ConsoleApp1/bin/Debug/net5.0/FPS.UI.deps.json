@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "FPS.UI/1.0.0": {
+        "runtime": {
+          "FPS.UI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FPS.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
