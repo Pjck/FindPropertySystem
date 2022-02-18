@@ -57,6 +57,21 @@ namespace FPS.UI
                         }
                     case 3:
                         {
+                            try
+                            {
+                                int custID;
+                                Console.WriteLine("Please Enter Customer ID to Delete it:");
+                                custID = Convert.ToInt32(Console.ReadLine());
+                                custBL.DropCustomer(custID);
+                            }
+                            catch (CustomException e)
+                            {
+                                Console.WriteLine(e.Message);
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine(e.Message);
+                            }
                             break;
                         }
 

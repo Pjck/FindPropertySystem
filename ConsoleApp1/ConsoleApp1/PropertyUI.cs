@@ -68,7 +68,44 @@ namespace FPS.UI
                         }
                     case 2: 
                         {
-                          
+                            try
+                            {
+                                int propID;
+                                Console.Write("Please Enter Property ID to Update it:");
+                                propID = Convert.ToInt32(Console.ReadLine());
+                               // Property propObj = new Property();
+                                propBL.UpdateProperty(propID,propObj);
+                                if (propObj != null)
+                                {
+                                    Console.WriteLine("Update Property Name :");
+                                    propObj.PropertyName = Console.ReadLine();
+                                    Console.WriteLine("Update Property Location :");
+                                    propObj.PropertyLocation = Console.ReadLine();
+                                    Console.WriteLine("Update Property Price :");
+                                    propObj.Price = int.Parse(Console.ReadLine());
+                                    Console.WriteLine("Update Property Category Name :");
+                                    propObj.CategoryName = Console.ReadLine();
+                                    bool propUpdated = propBL.UpdateProperty(propID, propObj);
+                                    if (propUpdated)
+                                        Console.WriteLine("Property Details Updated");
+                                    else
+                                        Console.WriteLine("Property Details not Updated ");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("No Property Details Available");
+                                }
+                            }
+                            catch (CustomException e)
+                            {
+                                Console.WriteLine(e.Message);
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine(e.Message);
+                            }
+
+
                             break;
                         }
                     case 3:
@@ -76,23 +113,9 @@ namespace FPS.UI
                             try
                             {
                                 int propID;
-                                Console.Write("Please Enter Property ID to Delete it:");
+                                Console.WriteLine("Please Enter Property ID to Delete it:");
                                 propID = Convert.ToInt32(Console.ReadLine());
-                                propBL.DeleteProperty(propID);
-                           
-                                //if (DeleteProperty(propID) != null)
-                                //{
-                                //    bool propertyDeleted = DeleteProperty(propID);
-                                //    if (propertyDeleted)
-                                //        Console.WriteLine("Property Deleted");
-                                //    else
-                                //        Console.WriteLine("Property not Deleted");
-
-                                //}
-                                //else
-                                //{
-                                //    Console.WriteLine("No Property details available");
-                                //}
+                                propBL.DeleteProperty(propID);                            
                             }
                             catch (CustomException e)
                             {
