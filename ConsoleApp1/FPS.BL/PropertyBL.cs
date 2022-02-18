@@ -26,7 +26,7 @@ using FPS.DAL;
 
         public bool DropProperty(int propID)
         {
-            return propDao.DropProperty(propID);
+            return propDao.DeleteProperty(propID);
         }
 
         public Property SearchPropertyByID(int propID)
@@ -37,6 +37,11 @@ using FPS.DAL;
         public List<Property> SearchPropertyByName(string propName)
         {
             return propDao.SearchPropertyByName(propName);
+        }
+
+        public List<Property> SearchPropertyByLocation(string propLocation)
+        {
+            return propDao.SearchPropertyByLocation(propLocation);
         }
 
         public List<Property> SearchPropertyByPrice(int price)

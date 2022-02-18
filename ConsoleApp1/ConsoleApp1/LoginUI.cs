@@ -8,5 +8,6 @@ namespace FSP.UI
 {
     class LoginUI
     {
+
     }
 }

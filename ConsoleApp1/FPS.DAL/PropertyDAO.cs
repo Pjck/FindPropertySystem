@@ -18,27 +18,30 @@ namespace FPS.DAL
         public PropertyDAO()
         {
             con = new SqlConnection();
-            // con.ConnectionString = ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
-            con.ConnectionString = "server=.;Integrated Security=true;Database=SampleTrainingDb";
+            //con.ConnectionString = ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
+            con.ConnectionString = "server=.;Integrated Security=true;Database=PropertySystemDB";
         }
-
+        
+       
         public bool AddProperty(Property propObj)
         {
+            
             bool flag = false;
             try
-            {
+            {   
                 if (propObj != null)
                 {
                     con.Open();
-                    SqlParameter[] param = new SqlParameter[5];
+                    SqlParameter[] param = new SqlParameter[6];
                     param[0] = new SqlParameter("@propID", propObj.PropertyID);
                     param[1] = new SqlParameter("@name", propObj.PropertyName);
-                    param[2] = new SqlParameter("@price", propObj.Price);
-                    param[3] = new SqlParameter("@descrip", propObj.Description);
-                    param[4] = new SqlParameter("@catName", propObj.CategoryName);
+                    param[2] = new SqlParameter("@location", propObj.PropertyLocation);
+                    param[3] = new SqlParameter("@price", propObj.Price);
+                    param[4] = new SqlParameter("@descrip", propObj.Description);
+                    param[5] = new SqlParameter("@catName", propObj.CategoryName);
 
                     cmd = new SqlCommand();
-                    cmd.CommandText = "Insert Into Property(PropID,Name,Price,Description,CategoryName)values(@propID,@name,@price,@descrip,@catName)";
+                    cmd.CommandText = "Insert Into Property(PropID,Name,PropertyLocation,Price,Description,CategoryName)values(@propID,@name,@location,@price,@descrip,@catName)";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
 
@@ -75,10 +78,11 @@ namespace FPS.DAL
             return flag;
         }
 
-        public List<Property> SearchPropertyByName(string propName)
-        {
-            throw new NotImplementedException();
-        }
+       
+        //public List<Property> SearchPropertyByName(string propName)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public bool UpdateProperty(int propID, Property propObj)
         {
@@ -94,15 +98,16 @@ namespace FPS.DAL
 
                     //Init Parameters
 
-                    SqlParameter[] param = new SqlParameter[5];
+                    SqlParameter[] param = new SqlParameter[6];
                     param[0] = new SqlParameter("@propID", propObj.PropertyID);
                     param[1] = new SqlParameter("@name", propObj.PropertyName);
-                    param[2] = new SqlParameter("@price", propObj.Price);
-                    param[3] = new SqlParameter("@descrip", propObj.Description);
-                    param[4] = new SqlParameter("@catName", propObj.CategoryName);
+                    param[2] = new SqlParameter("@location", propObj.PropertyLocation);
+                    param[3] = new SqlParameter("@price", propObj.Price);
+                    param[4] = new SqlParameter("@descrip", propObj.Description);
+                    param[5] = new SqlParameter("@catName", propObj.CategoryName);
 
                     cmd = new SqlCommand();
-                    cmd.CommandText = "Insert Into Property(PropID,Name,Price,Description,CategoryName)values(@propID,@name,@price,@descrip,@catName)";
+                    cmd.CommandText = "Insert Into Property(PropID,Name,PropertyLocation,Price,Description,CategoryName)values(@propID,@name,@location,@price,@descrip,@catName)";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
 
@@ -138,7 +143,7 @@ namespace FPS.DAL
             return flag;
         }
 
-        public bool DropProperty(int propID)
+        public bool DeleteProperty(int propID)
         {
             bool flag = true;
             int result = 0;
@@ -183,7 +188,7 @@ namespace FPS.DAL
 
             return flag;
         }
-
+       
         public Property SearchPropertyByID(int propID)
         {
             Property tempProp = null;
@@ -211,13 +216,14 @@ namespace FPS.DAL
                 if (dt.Rows.Count > 0)
                 {
                     DataRow drow = dt.Rows[0];//Fetch Row from Data Table
-                                              //Assign Row Data to Student Object
+                                              
                     tempProp = new Property();
                     tempProp.PropertyID = Int32.Parse(drow[0].ToString());
                     tempProp.PropertyName = drow[1].ToString();
-                    tempProp.Price = Convert.ToSingle(drow[2].ToString());
-                    tempProp.Description = drow[3].ToString();
-                    tempProp.CategoryName =(drow[4].ToString());
+                    tempProp.PropertyLocation = drow[2].ToString();
+                    tempProp.Price = Convert.ToSingle(drow[3].ToString());
+                    tempProp.Description = drow[4].ToString();
+                    tempProp.CategoryName =drow[5].ToString();
 
                 };
             }
@@ -243,7 +249,7 @@ namespace FPS.DAL
 
         }
 
-        public List<Property> SearchProductByName(string propName)
+        public List<Property> SearchPropertyByName(string propName)
         {
             List<Property> mypropList = null;
             Property tempProp = null;
@@ -279,9 +285,76 @@ namespace FPS.DAL
                         tempProp = new Property();
                         tempProp.PropertyID = Int32.Parse(drow[0].ToString());
                         tempProp.PropertyName = drow[1].ToString();
-                        tempProp.Price = Convert.ToSingle(drow[2].ToString());
-                        tempProp.Description = drow[3].ToString();
-                        tempProp.CategoryName = drow[4].ToString();
+                        tempProp.PropertyLocation = drow[2].ToString();
+                        tempProp.Price = Convert.ToSingle(drow[3].ToString());
+                        tempProp.Description = drow[4].ToString();
+                        tempProp.CategoryName = drow[5].ToString();
+
+                        //Add TempProo in to List
+                        mypropList.Add(tempProp);
+                    }
+                }
+                else
+                {
+                    throw new CustomException($"No Property Found  ");
+                }
+            }
+            catch (SqlException e)
+            {
+                throw new CustomException(e.Message);
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+
+            }
+            return mypropList;
+
+        }
+
+        public List<Property> SearchPropertyByLocation(string propLocation)
+        {
+            List<Property> mypropList = null;
+            Property tempProp = null;
+            try
+            {
+
+                con.Open();
+
+                //Init Parameters
+                SqlParameter p1 = new SqlParameter("@location", propLocation);
+
+                cmd = new SqlCommand();
+                cmd.CommandText = "Select * from  Property where PropertyLocation=@location";
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = con;
+
+                cmd.Parameters.Add(p1);
+                sdr = cmd.ExecuteReader();
+
+                DataTable dt = new DataTable();
+                if (sdr.HasRows)
+                {
+                    dt.Load(sdr);
+                }
+
+                if (dt.Rows.Count > 0)
+                {
+                    mypropList = new List<Property>();
+                    foreach (DataRow drow in dt.Rows)
+                    {
+
+                        //Assign Row Data to Property Object
+                        tempProp = new Property();
+                        tempProp.PropertyID = Int32.Parse(drow[0].ToString());
+                        tempProp.PropertyName = drow[1].ToString();
+                        tempProp.PropertyLocation = drow[2].ToString();
+                        tempProp.Price = Convert.ToSingle(drow[3].ToString());
+                        tempProp.Description = drow[4].ToString();
+                        tempProp.CategoryName = drow[5].ToString();
 
                         //Add TempProo in to List
                         mypropList.Add(tempProp);
@@ -344,9 +417,10 @@ namespace FPS.DAL
                         tempProp = new Property();
                         tempProp.PropertyID = Int32.Parse(drow[0].ToString());
                         tempProp.PropertyName = drow[1].ToString();
-                        tempProp.Price = Convert.ToSingle(drow[2].ToString());
-                        tempProp.Description = drow[3].ToString();
-                        tempProp.CategoryName = drow[4].ToString();
+                        tempProp.PropertyLocation = drow[2].ToString();
+                        tempProp.Price = Convert.ToSingle(drow[3].ToString());
+                        tempProp.Description = drow[4].ToString();
+                        tempProp.CategoryName = drow[5].ToString();
 
                         //Add TempProduct in to List
                         mypropList.Add(tempProp);
@@ -409,9 +483,10 @@ namespace FPS.DAL
                         tempProp = new Property();
                         tempProp.PropertyID = Int32.Parse(drow[0].ToString());
                         tempProp.PropertyName = drow[1].ToString();
-                        tempProp.Price = Convert.ToSingle(drow[2].ToString());
-                        tempProp.Description = drow[3].ToString();
-                        tempProp.CategoryName = drow[4].ToString();
+                        tempProp.PropertyLocation = drow[2].ToString();
+                        tempProp.Price = Convert.ToSingle(drow[3].ToString());
+                        tempProp.Description = drow[4].ToString();
+                        tempProp.CategoryName = drow[5].ToString();
 
                         //Add TempProduct in to List
                         mypropList.Add(tempProp);

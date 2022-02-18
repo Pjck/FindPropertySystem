@@ -42,3 +42,4 @@ C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\FPS
 C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\FPS.Exception.pdb
 C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\FPS.DAL.pdb
 C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\obj\Debug\net5.0\FPS.UI.csproj.CopyComplete
+C:\Users\prajw\source\repos\Sprint1\ConsoleApp1\ConsoleApp1\bin\Debug\net5.0\FPS.DAL.dll.config

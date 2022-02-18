@@ -4,5 +4,6 @@ namespace FPS.Entity
 {
     public class Login
     {
+
     }
 }
