@@ -20,9 +20,9 @@
 //            try
 //            {
 
-//                PropertyDAL loginDAL = new PropertyDAL();
+//                PropertyDAO loginDAL = new PropertyDAO();
 //                //call login check method of DAL
-//                access = loginDAL.LoginCheck(user);
+//                access = LoginDAO.LoginCheck(user);
 
 //            }
 //            catch (PropertyExceptions e)
