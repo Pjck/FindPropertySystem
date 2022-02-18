@@ -68,16 +68,7 @@ namespace FPS.UI
                         }
                     case 2: 
                         {
-                           /* Console.WriteLine("Enter Property ID to update information");
-                            int tempId = int.Parse(Console.ReadLine());
-                            bool flag = UpdateProperty(tempId,Property propObj);
-                            if (flag)
-                            {
-                                Console.ForegroundColor = ConsoleColor.Green;
-                                Console.WriteLine("\t\tRecord Added...\n");
-                                Console.ForegroundColor = ConsoleColor.White;
-
-                            }*/
+                          
                             break;
                         }
                     case 3:
@@ -87,21 +78,21 @@ namespace FPS.UI
                                 int propID;
                                 Console.Write("Please Enter Property ID to Delete it:");
                                 propID = Convert.ToInt32(Console.ReadLine());
-                                DeleteProperty(propID);
-                                /*
-                                if (DeleteProperty(propID) != null)
-                                {
-                                    bool propertyDeleted = DeleteProperty(propID);
-                                    if (propertyDeleted)
-                                        Console.WriteLine("Property Deleted");
-                                    else
-                                        Console.WriteLine("Property not Deleted");
+                                propBL.DeleteProperty(propID);
+                           
+                                //if (DeleteProperty(propID) != null)
+                                //{
+                                //    bool propertyDeleted = DeleteProperty(propID);
+                                //    if (propertyDeleted)
+                                //        Console.WriteLine("Property Deleted");
+                                //    else
+                                //        Console.WriteLine("Property not Deleted");
 
-                                }
-                                else
-                                {
-                                    Console.WriteLine("No Property details available");
-                                }*/
+                                //}
+                                //else
+                                //{
+                                //    Console.WriteLine("No Property details available");
+                                //}
                             }
                             catch (CustomException e)
                             {

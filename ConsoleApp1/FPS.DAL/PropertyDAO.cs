@@ -85,11 +85,11 @@ namespace FPS.DAL
         //    throw new NotImplementedException();
         //}
 
-        public bool UpdateProperty(int propID, Property propObj)
+        public bool UpdateProperty(int propID,Property propObj)
         {
             bool flag = true;
             int result = 0;
-
+            
             try
             {
                 if (propObj != null)
@@ -170,7 +170,7 @@ namespace FPS.DAL
                     {
                         flag = true;
                     }
-
+                    Console.WriteLine("Property Deleted Successfully\n");
                 }
                 else
                 {
@@ -185,7 +185,13 @@ namespace FPS.DAL
             {
                 throw e;
             }
-
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
 
             return flag;
         }
