@@ -11,6 +11,7 @@ namespace FPS.UI
    
     class PropertyUI
     {
+        
         Property propObj = null;
         PropertyBL propBL = null;
        
@@ -84,12 +85,13 @@ namespace FPS.UI
                             try
                             {
                                 int propID;
-                                Console.Write("Please Enter Property ID :");
+                                Console.Write("Please Enter Property ID to Delete it:");
                                 propID = Convert.ToInt32(Console.ReadLine());
-                                DropProperty(propID);
-                                if (propID != null)
+                                DeleteProperty(propID);
+                                /*
+                                if (DeleteProperty(propID) != null)
                                 {
-                                    bool propertyDeleted = DropProperty(propID);
+                                    bool propertyDeleted = DeleteProperty(propID);
                                     if (propertyDeleted)
                                         Console.WriteLine("Property Deleted");
                                     else
@@ -99,7 +101,7 @@ namespace FPS.UI
                                 else
                                 {
                                     Console.WriteLine("No Property details available");
-                                }
+                                }*/
                             }
                             catch (CustomException e)
                             {
@@ -330,7 +332,7 @@ namespace FPS.UI
             return true;
         }
 
-        public bool DropProperty(int propID)
+        public bool DeleteProperty(int propID)
         {
             return true;
         }

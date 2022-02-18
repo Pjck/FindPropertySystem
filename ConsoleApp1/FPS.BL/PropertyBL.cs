@@ -24,7 +24,7 @@ using FPS.DAL;
             return propDao.UpdateProperty(propId, propObj);
         }
 
-        public bool DropProperty(int propID)
+        public bool DeleteProperty(int propID)
         {
             return propDao.DeleteProperty(propID);
         }
