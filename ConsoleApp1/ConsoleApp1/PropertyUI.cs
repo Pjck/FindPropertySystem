@@ -72,7 +72,7 @@ namespace FPS.UI
                             {
                                 Console.Write("Please Enter Property ID to Update it:");
                                 int propID = Convert.ToInt32(Console.ReadLine());
-                                PropertyBL propBL = propBL.UpdateProperty(propID,propObj);
+                              //  PropertyBL propBL = propBL.UpdateProperty(propID,propObj);
                                 if (propObj != null)
                                 {
                                     Console.WriteLine("Update Property Name :");

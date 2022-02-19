@@ -19,6 +19,9 @@ namespace FPS.DAL
         {
             con = new SqlConnection();
             //con.ConnectionString = ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
+
+           // con.ConnectionString = "Data Source=laptop-navmnhb2.PropertySystemDB.dbo1; Initial Catalog = PropertySystemDB; User ID = PropertySystem; Password = admin";
+
             con.ConnectionString = "server=.;Integrated Security=true;Database=PropertySystemDB";
         }
         
