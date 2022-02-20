@@ -20,7 +20,7 @@ namespace FPS.DAL
         {
             con = new SqlConnection();
             // con.ConnectionString = ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
-            con.ConnectionString = "server=.;Integrated Security=true;Database=SampleTrainingDb";
+            con.ConnectionString = "server=.;Integrated Security=true;Database=PropertySystemDB";
         }
 
         public bool AddCustomer(Customer custObj)

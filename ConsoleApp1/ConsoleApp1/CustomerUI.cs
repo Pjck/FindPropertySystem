@@ -19,7 +19,7 @@ namespace FPS.UI
             custBL = new CustomerBL();
         }
 
-        public static void CustomerMenu()
+        public void CustomerMenu()
         {
             Console.WriteLine("\t\t Customer Menu");
             Console.WriteLine("=========================================");

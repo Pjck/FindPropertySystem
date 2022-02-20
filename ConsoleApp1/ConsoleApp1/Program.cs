@@ -20,7 +20,7 @@ namespace FPS.UI
                     owner.OwnerMenu();
                     break;
                 case 2:
-                    cust.CustomerMenu();
+                    cust.CustomerMain();
                     break;
             }
         }
