@@ -22,6 +22,9 @@ namespace FPS.UI
                 case 2:
                     cust.CustomerMain();
                     break;
+                default: Console.WriteLine("Invalid Input......Please enter correct Choice");
+                    break;
+
             }
         }
     }

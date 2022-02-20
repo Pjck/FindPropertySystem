@@ -31,13 +31,13 @@ namespace FPS.DAL
                 {
                     con.Open();
                     SqlParameter[] param = new SqlParameter[5];
-                    param[0] = new SqlParameter("@ownID", ownObj.OwnerID);
-                    param[1] = new SqlParameter("@ownName", ownObj.OwnerName);
-                    param[2] = new SqlParameter("@ownPhoneNo", ownObj.OwnerPhNo);
+                    param[0] = new SqlParameter("@ownerID", ownObj.OwnerID);
+                    param[1] = new SqlParameter("@ownerName", ownObj.OwnerName);
+                    param[2] = new SqlParameter("@ownerPhoneNo", ownObj.OwnerPhNo);
 
 
                     cmd = new SqlCommand();
-                    cmd.CommandText = "Insert Into Owner(OwnID,OwnName,OwnerPhNo)values(@ownID,@ownName,@ownPhoneNo)";
+                    cmd.CommandText = "Insert Into Owner(OwnID,OwnName,OwnerPhNo)values(@ownerID,@ownerName,@ownerPhoneNo)";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
 
@@ -90,13 +90,13 @@ namespace FPS.DAL
                     //Init Parameters
 
                     SqlParameter[] param = new SqlParameter[5];
-                    param[0] = new SqlParameter("@ownID", ownObj.OwnerID);
-                    param[1] = new SqlParameter("@ownName", ownObj.OwnerName);
-                    param[2] = new SqlParameter("@ownPhoneNo", ownObj.OwnerPhNo);
+                    param[0] = new SqlParameter("@ownerID", ownObj.OwnerID);
+                    param[1] = new SqlParameter("@ownerName", ownObj.OwnerName);
+                    param[2] = new SqlParameter("@ownerPhoneNo", ownObj.OwnerPhNo);
 
 
                     cmd = new SqlCommand();
-                    cmd.CommandText = "Insert Into Owner(OwnID,OwnName,OwnerPhNo)values(@ownID,@ownName,@ownPhoneNo)";
+                    cmd.CommandText = "Insert Into Owner(OwnID,OwnName,OwnerPhNo)values(@ownerID,@ownerName,@ownerPhoneNo)";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
 
@@ -144,10 +144,10 @@ namespace FPS.DAL
                     con.Open();
 
                     //Init Parameters
-                    SqlParameter p1 = new SqlParameter("@ownID", ownID);
+                    SqlParameter p1 = new SqlParameter("@ownerID", ownID);
 
                     cmd = new SqlCommand();
-                    cmd.CommandText = "Delete from Owner where OwnID=@OwnID";
+                    cmd.CommandText = "Delete from Owner where OwnID=@OwnerID";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
 

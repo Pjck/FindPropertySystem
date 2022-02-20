@@ -16,8 +16,8 @@ namespace FPS.UI
         OwnerBL ownBL = null;
         public OwnerUI()
         {
-            propBL = new PropertyBL();
-            ownBL = new OwnerBL();
+            PropertyBL propBL = new PropertyBL();
+            OwnerBL ownBL = new OwnerBL();
         }
         public void OwnerMenu()
         {
@@ -34,7 +34,7 @@ namespace FPS.UI
             {
 
                 case 1:
-                    own = new Owner();
+                    Owner own = new Owner();
                     Console.WriteLine("Please Enter Owner ID :");
                     own.OwnerID = Convert.ToInt32(Console.ReadLine());
 
@@ -66,14 +66,14 @@ namespace FPS.UI
 
                     Console.WriteLine("Please Enter owner PhoneNO :");
                     own1.OwnerPhNo = long.Parse(Console.ReadLine());
-                    int update_id = int.Parse(Console.ReadLine());
-                    bool flag2 = ownBL.UpdateOwner(update_id, own1);
-                    if (flag2)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\t\towner detais  updated...\n");
-                        Console.ForegroundColor = ConsoleColor.White;
-                    }
+                    long update_id = long.Parse(Console.ReadLine());
+                    //bool flag2 = ownBL.UpdateOwner(update_id, own1);
+                    //if (flag2)
+                    //{
+                    //    Console.ForegroundColor = ConsoleColor.Green;
+                    //    Console.WriteLine("\t\tOwner detais  updated...\n");
+                    //    Console.ForegroundColor = ConsoleColor.White;
+                    //}
                     break;
 
                 case 3:
@@ -91,7 +91,7 @@ namespace FPS.UI
 
                 case 4:
 
-                    bool flag4 = ownBL.AddOwner(own);
+                    bool flag4 = ownBL.AddOwner(own1);
 
                     if (flag4)
                     {

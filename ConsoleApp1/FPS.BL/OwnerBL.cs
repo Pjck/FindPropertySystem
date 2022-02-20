@@ -10,25 +10,25 @@ namespace FPS.BL
     public class OwnerBL
     {
 
-        OwnerDAO custDao = null;
+        OwnerDAO ownerDao = null;
         public OwnerBL()
         {
-            custDao = new OwnerDAO();
+            ownerDao = new OwnerDAO();
         }
         public bool AddOwner(Owner ownObj)
         {
             //Calling DAO class Function
-            return custDao.AddOwner(ownObj);
+            return ownerDao.AddOwner(ownObj);
         }
 
         public bool UpdateOwner(int ownID, Owner ownObj)
         {
-            return custDao.UpdateOwner(ownID, ownObj);
+            return ownerDao.UpdateOwner(ownID, ownObj);
         }
 
         public bool DropOwner(int ownID)
         {
-            return custDao.DropOwner(ownID);
+            return ownerDao.DropOwner(ownID);
         }
     }
 
