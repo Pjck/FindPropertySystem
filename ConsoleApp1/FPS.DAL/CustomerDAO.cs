@@ -31,14 +31,14 @@ namespace FPS.DAL
                 if (custObj != null)
                 {
                     con.Open();
-                    SqlParameter[] param = new SqlParameter[5];
+                    SqlParameter[] param = new SqlParameter[3];
                     param[0] = new SqlParameter("@custID", custObj.CustomerID);
                     param[1] = new SqlParameter("@custName", custObj.CustomerName);
                     param[2] = new SqlParameter("@custPhoneNo", custObj.CustomerPhNo);
 
 
                     cmd = new SqlCommand();
-                    cmd.CommandText = "Insert Into Customer(CustID,CustName,CustomerPhNo)values(@custID,@custName,@custPhoneNo)";
+                    cmd.CommandText = "Insert Into Customer(custID,custName,custPhoneNo)values(@custID,@custName,@custPhoneNo)";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
 

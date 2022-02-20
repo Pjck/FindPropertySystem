@@ -21,14 +21,14 @@ namespace FPS.BL
             return ownerDao.AddOwner(ownObj);
         }
 
-        public bool UpdateOwner(int ownID, Owner ownObj)
+        public bool UpdateOwner(int ownerID, Owner ownObj)
         {
-            return ownerDao.UpdateOwner(ownID, ownObj);
+            return ownerDao.UpdateOwner(ownerID, ownObj);
         }
 
-        public bool DropOwner(int ownID)
+        public bool DropOwner(int ownerID)
         {
-            return ownerDao.DropOwner(ownID);
+            return ownerDao.DropOwner(ownerID);
         }
     }
 

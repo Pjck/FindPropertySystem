@@ -247,8 +247,8 @@ namespace FPS.UI
 
                 case 2:
 
-                    Console.WriteLine("Enter the Owner ID");
-                    own1 = new Owner();
+                    //Console.WriteLine("Enter the Owner ID");
+                    //own1 = new Owner();
                     Console.WriteLine("Please Enter owner ID :");
                     own1.OwnerID = Convert.ToInt32(Console.ReadLine());
 
@@ -257,14 +257,14 @@ namespace FPS.UI
 
                     Console.WriteLine("Please Enter owner PhoneNO :");
                     own1.OwnerPhNo = long.Parse(Console.ReadLine());
-                    long update_id = long.Parse(Console.ReadLine());
-                    //bool flag2 = ownBL.UpdateOwner(update_id, own1);
-                    //if (flag2)
-                    //{
-                    //    Console.ForegroundColor = ConsoleColor.Green;
-                    //    Console.WriteLine("\t\tOwner detais  updated...\n");
-                    //    Console.ForegroundColor = ConsoleColor.White;
-                    //}
+                    int update_id = int.Parse(Console.ReadLine());
+                    bool flag2 = ownBL.UpdateOwner(update_id, own1);
+                    if (flag2)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("\t\tOwner detais  updated...\n");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
                     break;
 
                 case 3:
@@ -312,14 +312,40 @@ namespace FPS.UI
                     break;
 
                 case 5:
-                    Console.WriteLine("Enter Property ID ");
-                    int update_id1 = int.Parse(Console.ReadLine());
-                    bool flag6 = propBL.UpdateProperty(update_id1, propObj);
-                    if (flag6)
+                  
+                    try
                     {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\t\tRecord updated...\n");
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("Please Enter Property ID to Update it:");
+                        int propID = Convert.ToInt32(Console.ReadLine());
+                        PropertyBL propBL = propBL.UpdateProperty(propID,propObj);
+                        if (propObj != null)
+                        {
+                            Console.WriteLine("Update Property Name :");
+                            propObj.PropertyName = Console.ReadLine();
+                            Console.WriteLine("Update Property Location :");
+                            propObj.PropertyLocation = Console.ReadLine();
+                            Console.WriteLine("Update Property Price :");
+                            propObj.Price = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Update Property Category Name :");
+                            propObj.CategoryName = Console.ReadLine();
+                            bool propUpdated = propBL.UpdateProperty(propID, propObj);
+                            if (propUpdated)
+                                Console.WriteLine("Property Details Updated");
+                            else
+                                Console.WriteLine("Property Details not Updated ");
+                        }
+                        else
+                        {
+                            Console.WriteLine("No Property Details Available");
+                        }
+                    }
+                    catch (CustomException e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
                     }
                     break;
 

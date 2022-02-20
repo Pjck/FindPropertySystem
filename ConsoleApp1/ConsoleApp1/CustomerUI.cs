@@ -41,24 +41,14 @@ namespace FPS.UI
             {
 
                 case 1:
-                    custObj = new Customer();
-                    Console.WriteLine("Please Enter Customer ID :");
-                    custObj.CustomerID = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("Please Enter Customer Name:");
-                    custObj.CustomerName = Console.ReadLine();
-
-                    Console.WriteLine("Please Enter Customer PhoneNO :");
-                    custObj.CustomerPhNo = long.Parse(Console.ReadLine());
-
-
-                    bool flag1 = custBL.AddCustomer(custObj);
-
-                    if (flag1)
+                    bool flag = AddCustomer();
+                    if (flag)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\t\tCustomer details Added...\n");
+                        Console.WriteLine("\t\tRecord Added...\n");
                         Console.ForegroundColor = ConsoleColor.White;
+
                     }
 
                     break;
@@ -101,8 +91,9 @@ namespace FPS.UI
 
 
                 case 4:
-                    
-                    try{
+
+                    try
+                    {
                         Console.WriteLine("Enter Property ID");
                         int search_id = int.Parse(Console.ReadLine());
                         Property pObj = propBL.SearchPropertyByID(search_id);
@@ -122,16 +113,16 @@ namespace FPS.UI
                         }
                     }
 
-                            catch (CustomException e)
-                        {
-                            Console.WriteLine(e.Message);
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine(e.Message);
-                        }
-                    
-                         break;
+                    catch (CustomException e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+
+                    break;
 
                 case 5:
                     Console.WriteLine("Enter Property name");
@@ -237,6 +228,20 @@ namespace FPS.UI
 
             }
 
+        }
+        public bool AddCustomer()
+        {
+            Customer custObj = new Customer();
+            Console.WriteLine("Please Enter Customer ID :");
+            custObj.CustomerID = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Please Enter Customer Name:");
+            custObj.CustomerName = Console.ReadLine();
+
+            Console.WriteLine("Please Enter Customer PhoneNo :");
+            custObj.CustomerPhNo = Convert.ToInt32(Console.ReadLine());
+
+            return custBL.AddCustomer(custObj);
         }
     }
 }

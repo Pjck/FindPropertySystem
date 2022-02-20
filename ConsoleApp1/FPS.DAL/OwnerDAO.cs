@@ -18,8 +18,6 @@ namespace FPS.DAL
         public OwnerDAO()
         {
             con = new SqlConnection();
-            // con.ConnectionString = ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
-
             con.ConnectionString = "server=.;Integrated Security=true;Database=PropertySystemDB";
         }
 
@@ -31,14 +29,14 @@ namespace FPS.DAL
                 if (ownObj != null)
                 {
                     con.Open();
-                    SqlParameter[] param = new SqlParameter[5];
+                    SqlParameter[] param = new SqlParameter[3];
                     param[0] = new SqlParameter("@ownerID", ownObj.OwnerID);
                     param[1] = new SqlParameter("@ownerName", ownObj.OwnerName);
                     param[2] = new SqlParameter("@ownerPhoneNo", ownObj.OwnerPhNo);
 
 
                     cmd = new SqlCommand();
-                    cmd.CommandText = "Insert Into Owner(OwnID,OwnName,OwnerPhNo)values(@ownerID,@ownerName,@ownerPhoneNo)";
+                    cmd.CommandText = "Insert Into owner(OwnerID,OwnerName,OwnerPhoneNo)values(@ownerID,@ownerName,@ownerPhoneNo)";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
 

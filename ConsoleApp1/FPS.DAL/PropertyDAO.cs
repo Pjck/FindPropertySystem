@@ -112,7 +112,7 @@ namespace FPS.DAL
                     param[5] = new SqlParameter("@catName", propObj.CategoryName);
 
                     cmd = new SqlCommand();
-                    cmd.CommandText = "Insert Into Property(PropID,Name,PropertyLocation,Price,Description,CategoryName)values(@propID,@name,@location,@price,@descrip,@catName)";
+                    cmd.CommandText = "update Property set PropID='@propID',Name='@name',PropertyLocation='@location',Price='@price',Description='@descrip',CategoryName='@catName' where PropID=@propID";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
 
