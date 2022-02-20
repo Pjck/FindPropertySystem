@@ -132,7 +132,7 @@ namespace FPS.DAL
             return flag;
         }
 
-        public bool DropCustomer(int ownID)
+        public bool DropOwner(int ownID)
         {
             bool flag = true;
             int result = 0;
@@ -182,7 +182,7 @@ namespace FPS.DAL
 
 
 
-        public List<Customer> ShowAllOwner()
+        public List<Owner> ShowAllOwner()
         {
             List<Owner> myownList = null;
             Owner tempOwn = null;
@@ -218,7 +218,7 @@ namespace FPS.DAL
                         tempOwn = new Owner();
                         tempOwn.OwnerID = Int32.Parse(drow[0].ToString());
                         tempOwn.OwnerName = drow[1].ToString();
-                        tempOwn.OwnerPhNo = Convert.ToSingle(drow[2].ToString());
+                        tempOwn.OwnerPhNo = long.Parse(drow[2].ToString());
 
                         //Add TempProduct in to List
                         myownList.Add(tempOwn);

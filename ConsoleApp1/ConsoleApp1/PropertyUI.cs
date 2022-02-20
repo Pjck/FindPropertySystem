@@ -32,7 +32,7 @@ namespace FPS.UI
         {
             Console.WriteLine("\t\t Property Menu");
             Console.WriteLine("=========================================");
-            Console.WriteLine("----Menu Items----");
+            Console.WriteLine("---------------Menu Items---------------");
             Console.WriteLine("1.\t Add Property Details.");
             Console.WriteLine("2.\t Modify Property Details.");
             Console.WriteLine("3.\t Delete Property Detials.");
