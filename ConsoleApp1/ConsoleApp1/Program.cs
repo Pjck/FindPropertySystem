@@ -9,9 +9,11 @@ namespace FPS.UI
         {
             CustomerUI cust = new CustomerUI();
             OwnerUI owner = new OwnerUI();
-            Console.WriteLine("Enter Your Choice");
-            Console.WriteLine("1.\tOWNER");
-            Console.WriteLine("2.\tCUSTOMER");
+            Console.WriteLine("Enter 1 for Owner Login and 2 for Customer Login");
+            Console.WriteLine("=========================================");
+            Console.WriteLine("1.OWNER");
+            Console.WriteLine("2.CUSTOMER");
+            Console.WriteLine("------------------------------------------");
             int choice_1 = int.Parse(Console.ReadLine());
 
             switch (choice_1)
@@ -20,12 +22,16 @@ namespace FPS.UI
                     owner.OwnerMenu();
                     break;
                 case 2:
-                    cust.CustomerMain();
+                    cust.CustomerMenu();
                     break;
-                default: Console.WriteLine("Invalid Input......Please enter correct Choice");
+                default:
+                    Console.WriteLine("Invalid Input......Please enter correct Choice");
                     break;
 
             }
+
+            //PropertyUI propObj = new PropertyUI();
+            //propObj.PropertyMain();
         }
     }
 }

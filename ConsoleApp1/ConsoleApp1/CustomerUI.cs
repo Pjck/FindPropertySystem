@@ -22,32 +22,33 @@ namespace FPS.UI
             propBL = new PropertyBL();
         }
 
-        public void customermenu()
+        public void CustomerMenu()
         {
 
 
         y:
-            Console.WriteLine("1.\tAdd customer deatails");
-            Console.WriteLine("1.\tupdate customer deatails");
-            Console.WriteLine("1.\tdelete customer deatails");
-            Console.WriteLine("1.Search property by Propertyid");
-            Console.WriteLine("2.Search property by PropertyNmae");
-            Console.WriteLine("3.Search property by Location");
-            Console.WriteLine("4.Search property by Price");
-            Console.WriteLine("5.Show All Proprties");
+            Console.WriteLine("=========================================");
+            Console.WriteLine("1.\tAdd Customer deatails");
+            Console.WriteLine("2.\tupdate Customer deatails");
+            Console.WriteLine("3.\tdelete Customer deatails");
+            Console.WriteLine("4.\tSearch Property by Propertyid");
+            Console.WriteLine("5.\tSearch Property by PropertyNmae");
+            Console.WriteLine("6.\tSearch Property by Location");
+            Console.WriteLine("7.\tSearch Property by Price");
+            Console.WriteLine("8.\tShow All Proprties");
             int choice_3 = int.Parse(Console.ReadLine());
             switch (choice_3)
             {
 
                 case 1:
                     custObj = new Customer();
-                    Console.WriteLine("Please Enter customer ID :");
+                    Console.WriteLine("Please Enter Customer ID :");
                     custObj.CustomerID = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("Please Enter owner Name:");
+                    Console.WriteLine("Please Enter Customer Name:");
                     custObj.CustomerName = Console.ReadLine();
 
-                    Console.WriteLine("Please Enter customer PhoneNO :");
+                    Console.WriteLine("Please Enter Customer PhoneNO :");
                     custObj.CustomerPhNo = long.Parse(Console.ReadLine());
 
 
@@ -56,7 +57,7 @@ namespace FPS.UI
                     if (flag1)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\t\towner details Added...\n");
+                        Console.WriteLine("\t\tCustomer details Added...\n");
                         Console.ForegroundColor = ConsoleColor.White;
                     }
 
@@ -64,13 +65,13 @@ namespace FPS.UI
 
                 case 2:
                     custObj1 = new Customer();
-                    Console.WriteLine("Please Enter customer ID :");
+                    Console.WriteLine("Please Enter Customer ID :");
                     custObj1.CustomerID = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("Please Enter owner Name:");
+                    Console.WriteLine("Please Enter Customer Name:");
                     custObj1.CustomerName = Console.ReadLine();
 
-                    Console.WriteLine("Please Enter customer PhoneNO :");
+                    Console.WriteLine("Please Enter Customer PhoneNO :");
                     custObj1.CustomerPhNo = long.Parse(Console.ReadLine());
 
 
@@ -79,7 +80,7 @@ namespace FPS.UI
                     if (flag2)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\t\towner details Added...\n");
+                        Console.WriteLine("\t\tCustomer details Added...\n");
                         Console.ForegroundColor = ConsoleColor.White;
                     }
 
@@ -100,44 +101,133 @@ namespace FPS.UI
 
 
                 case 4:
-                    Console.WriteLine("Enter the property ID");
-                    int search_id = int.Parse(Console.ReadLine());
-                    Property product = propBL.SearchPropertyByID(search_id);
-                    Console.WriteLine(product);
-                    break;
+                    
+                    try{
+                        Console.WriteLine("Enter Property ID");
+                        int search_id = int.Parse(Console.ReadLine());
+                        Property pObj = propBL.SearchPropertyByID(search_id);
+                        Console.WriteLine(pObj);
+                        if (pObj != null)
+                        {
+                            Console.WriteLine("\t\tProperty Details");
+                            Console.WriteLine("=================================");
+                            Console.WriteLine($"Property ID :{pObj.PropertyID}");
+                            Console.WriteLine("---------------------------------");
+                            Console.WriteLine($"Property Name :{pObj.PropertyName}");
+                            Console.WriteLine($"Description  :{pObj.Description}");
+                            Console.WriteLine($"Price :{pObj.Price}");
+                            Console.WriteLine($"Location:{ pObj.PropertyLocation}");
+                            Console.WriteLine($"Category Name :{pObj.CategoryName}");
+                            Console.WriteLine("-----------------------------------");
+                        }
+                    }
+
+                            catch (CustomException e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                    
+                         break;
+
                 case 5:
-                    Console.WriteLine("Enter the property name");
+                    Console.WriteLine("Enter Property name");
                     string search_name = Console.ReadLine();
                     List<Property> propList = propBL.SearchPropertyByName(search_name);
-                    foreach (var item in propList)
+                    foreach (var pObj in propList)
                     {
-                        Console.WriteLine("{0,4} |{1,-10} |{2,4} |{3,-20} |{4,3} |{5,-10} |{6,10}", item.PropertyID, item.PropertyName, item.Price, item.Description, item.CategoryName, item.PropertyLocation);
+                        //  Console.WriteLine("{0,4} |{1,-10} |{2,4} |{3,-20} |{4,3} |{5,-10} |{6,10}", item.PropertyID, item.PropertyName, item.Price, item.Description, item.CategoryName, item.PropertyLocation);
+
+                        Console.WriteLine("\t\t Property Details");
+                        Console.WriteLine("=================================");
+                        Console.WriteLine($"Property ID :{pObj.PropertyID}");
+                        Console.WriteLine("---------------------------------");
+                        Console.WriteLine($"Property Name :{pObj.PropertyName}");
+                        Console.WriteLine($"Description  :{pObj.Description}");
+                        Console.WriteLine($"Price :{pObj.Price}");
+                        Console.WriteLine($"Location:{ pObj.PropertyLocation}");
+                        Console.WriteLine($"Category Name :{pObj.CategoryName}");
+                        Console.WriteLine("-----------------------------------");
+                        Console.WriteLine();
                     }
                     break;
                 case 6:
                     Console.WriteLine("Enter the property location");
                     string search_location = Console.ReadLine();
                     List<Property> proplist = propBL.SearchPropertyByLocation(search_location);
-                    foreach (var item in proplist)
+                    foreach (var pObj in proplist)
                     {
-                        Console.WriteLine("{0,4} |{1,-10} |{2,4} |{3,-20} |{4,3} |{5,-10} |{6,10}", item.PropertyID, item.PropertyName, item.Price, item.Description, item.CategoryName, item.PropertyLocation);
+                        //  Console.WriteLine("{0,4} |{1,-10} |{2,4} |{3,-20} |{4,3} |{5,-10} |{6,10}", item.PropertyID, item.PropertyName, item.Price, item.Description, item.CategoryName, item.PropertyLocation);
+
+                        Console.WriteLine("\t\t Property Details");
+                        Console.WriteLine("=================================");
+                        Console.WriteLine($"Property ID :{pObj.PropertyID}");
+                        Console.WriteLine("---------------------------------");
+                        Console.WriteLine($"Property Name :{pObj.PropertyName}");
+                        Console.WriteLine($"Description  :{pObj.Description}");
+                        Console.WriteLine($"Price :{pObj.Price}");
+                        Console.WriteLine($"Location:{ pObj.PropertyLocation}");
+                        Console.WriteLine($"Category Name :{pObj.CategoryName}");
+                        Console.WriteLine("-----------------------------------");
+                        Console.WriteLine();
                     }
                     break;
                 case 7:
                     Console.WriteLine("Enter the property Price");
                     int search_price = int.Parse(Console.ReadLine());
                     List<Property> proprice = propBL.SearchPropertyByPrice(search_price);
-                    foreach (var item in proprice)
+                    foreach (var pObj in proprice)
                     {
-                        Console.WriteLine("{0,4} |{1,-10} |{2,4} |{3,-20} |{4,3} |{5,-10} |{6,10}", item.PropertyID, item.PropertyName, item.Price, item.Description, item.CategoryName, item.PropertyLocation);
+                        //Console.WriteLine("{0,4} |{1,-10} |{2,4} |{3,-20} |{4,3} |{5,-10} |{6,10}", item.PropertyID, item.PropertyName, item.Price, item.Description, item.CategoryName, item.PropertyLocation);
+
+                        Console.WriteLine("\t\t Property Details");
+                        Console.WriteLine("=================================");
+                        Console.WriteLine($"Property ID :{pObj.PropertyID}");
+                        Console.WriteLine("---------------------------------");
+                        Console.WriteLine($"Property Name :{pObj.PropertyName}");
+                        Console.WriteLine($"Description  :{pObj.Description}");
+                        Console.WriteLine($"Price :{pObj.Price}");
+                        Console.WriteLine($"Location:{ pObj.PropertyLocation}");
+                        Console.WriteLine($"Category Name :{pObj.CategoryName}");
+                        Console.WriteLine("-----------------------------------");
+                        Console.WriteLine();
                     }
                     break;
-                case8:
-
-                    List<Property> Allprop = propBL.ShowAllProperty();
-                    foreach (var item in Allprop)
+                case 8:
+                    try
                     {
-                        Console.WriteLine("{0,4} |{1,-10} |{2,4} |{3,-20} |{4,3} |{5,-10} |{6,10}", item.PropertyID, item.PropertyName, item.Price, item.Description, item.CategoryName, item.PropertyLocation);
+
+
+                        List<Property> tempList = propBL.ShowAllProperty();
+                        if (tempList != null)
+                        {
+                            foreach (var pObj in tempList)
+                            {
+
+                                Console.WriteLine("\t\t Property Details");
+                                Console.WriteLine("=================================");
+                                Console.WriteLine($"Property ID :{pObj.PropertyID}");
+                                Console.WriteLine("---------------------------------");
+                                Console.WriteLine($"Property Name :{pObj.PropertyName}");
+                                Console.WriteLine($"Description  :{pObj.Description}");
+                                Console.WriteLine($"Price :{pObj.Price}");
+                                Console.WriteLine($"Location:{ pObj.PropertyLocation}");
+                                Console.WriteLine($"Category Name :{pObj.CategoryName}");
+                                Console.WriteLine("-----------------------------------");
+                                Console.WriteLine();
+                            }
+                        }
+                    }
+                    catch (CustomException e)
+                    {
+                        Console.WriteLine(e.Message);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
                     }
                     break;
 

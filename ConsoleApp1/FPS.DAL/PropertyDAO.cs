@@ -66,6 +66,7 @@ namespace FPS.DAL
             }
             catch (SqlException se)
             {
+                
                 throw se;
             }
             catch (Exception e)

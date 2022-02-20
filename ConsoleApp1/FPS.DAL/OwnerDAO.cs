@@ -19,6 +19,7 @@ namespace FPS.DAL
         {
             con = new SqlConnection();
             // con.ConnectionString = ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
+
             con.ConnectionString = "server=.;Integrated Security=true;Database=PropertySystemDB";
         }
 
@@ -132,22 +133,22 @@ namespace FPS.DAL
             return flag;
         }
 
-        public bool DropOwner(int ownID)
+        public bool DropOwner(int ownerID)
         {
             bool flag = true;
             int result = 0;
             try
             {
-                if (ownID > 0)
+                if (ownerID > 0)
                 {
 
                     con.Open();
 
                     //Init Parameters
-                    SqlParameter p1 = new SqlParameter("@ownerID", ownID);
+                    SqlParameter p1 = new SqlParameter("@ownerID", ownerID);
 
                     cmd = new SqlCommand();
-                    cmd.CommandText = "Delete from Owner where OwnID=@OwnerID";
+                    cmd.CommandText = "Delete from Owner where ownerID=@ownerID";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
 

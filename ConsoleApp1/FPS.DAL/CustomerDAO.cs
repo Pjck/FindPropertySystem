@@ -63,6 +63,7 @@ namespace FPS.DAL
             }
             catch (Exception e)
             {
+                
                 throw e;
             }
             finally
